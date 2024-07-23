@@ -15,7 +15,7 @@ pipeline {
                 script{
                     currentBuild.displayName = VER
                 }
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-cred', url: 'https://github.com/artechtraining/jenkins-cicd.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'artechtraining-git', url: 'https://github.com/artechtraining/jenkins-cicd.git']]])
             }    
         }//end SCM
 
